@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestellen | Flexora</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Flexora</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="producten.html">Producten</a>
+      <a href="why-filter.html">Waarom Filteren?</a>
+      <a href="bestellen.html">Bestellen</a>
+    </nav>
+  </header>
+
+  <main class="checkout-page">
+    <div class="checkout-container">
+      <div class="product-summary">
+        <img src="brita.jpeg" alt="Flexora Waterfilter" class="checkout-product-image">
+        <div class="product-details">
+          <h2>Flexora Premium Waterfilter</h2>
+          <p class="price">€67,07</p>
+          <ul class="features-list">
+            <li>✓ 99.9% zuivering</li>
+            <li>✓ 600L capaciteit</li>
+            <li>✓ Gratis verzending</li>
+            <li>✓ 30 dagen garantie</li>
+          </ul>
+        </div>
+      </div>
+
+      <form id="payment-form" class="checkout-form">
+        <div class="form-section">
+          <h3>Persoonlijke Gegevens</h3>
+          <div class="input-group">
+            <input type="text" id="name" required placeholder="Volledige naam">
+            <input type="email" id="email" required placeholder="E-mailadres">
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Verzendadres</h3>
+          <div class="input-group">
+            <input type="text" id="street" required placeholder="Straat en huisnummer">
+            <input type="text" id="postal" required placeholder="Postcode">
+            <input type="text" id="city" required placeholder="Stad">
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Betaling</h3>
+          <div id="card-element"></div>
+          <div id="card-errors" class="payment-error"></div>
+        </div>
+
+        <button type="submit" class="checkout-button">
+          <span id="button-text">Nu Bestellen - €67,07</span>
+          <div id="spinner" class="spinner hidden"></div>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: info@flexora.be</p>
+        <p>Tel: +32 494 89 70 46</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links</h3>
+        <a href="producten.html">Producten</a>
+        <a href="why-filter.html">Waarom Filteren?</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 Flexora – Alle rechten voorbehouden
+    </div>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
